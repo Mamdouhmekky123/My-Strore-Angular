@@ -1,0 +1,25 @@
+
+<div class="form" >
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+   <!-- <p>currently you are signing in as {{FullName}}</p>  -->
+    <div class="form-row" >
+      <div class="form-group col-md-6">
+        <label for="name">Full name</label>
+        <input required minlength="3" [(ngModel)]="fullName"  name="fullName" type="text" class="form-control" id="name" placeholder="ex: Ali (minimum 3 characters)">
+    <!-- <br><span *ngIf="form.invalid" style="color:red ;">Please Enter a Valid Input </span> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address</label>
+      <input required minlength="6" [(ngModel)]="Address" name="Address" type="text" class="form-control" id="inputAddress" placeholder="ex: 1234 Main St (minimum 6 characters)">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Your Credit Card number</label>
+        <input required pattern="[0-9]{16}" [(ngModel)]="cardNumber" name="cardNumber"  s class="form-control" placeholder="(16- digit number)">
+      </div>
+    </div>
+    <p style="opacity: .7;">We will never share your payment details with any body else.</p>
+    <button  style="list-style-type: none;"[disabled]="form.invalid" type="submit" class="btn btn-primary" routerLink="/order-confirmation/{{fullName}}" >Submit</button>
+  </form>
+</div>

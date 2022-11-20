@@ -1,0 +1,19 @@
+<div class="item">
+  <div routerLink="/details/{{data.id}}">
+    <img src="{{data.url}}" alt="" >
+    <div class="body">
+      <h4>{{data.name}}</h4>
+      
+    </div>
+  </div>
+ 
+  <div class="px-3 mb-4 d-flex justify-content-between align-items-center ">
+    <div class="handle">
+      <div class="inputQuantity">
+    <input type="number" class="form-control"  [ngModel]="amount" (ngModelChange)="amount = $event" >
+    <!-- I have to add formModule in products formModule -->
+    <button class="btn btn-primary"  (click)="add()" >Add to cart</button>
+    </div>
+    <div class="price">{{data.price}} $</div>
+    </div>
+  </div>

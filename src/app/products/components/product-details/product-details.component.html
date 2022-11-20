@@ -1,0 +1,21 @@
+<div class="box">
+  <div class="row" >
+    <div class="col-md-5 col-sm-12" >
+      <img src="{{data.url}}" alt="" />
+    </div>
+    <div class=" data co-md-7 col-sm-12">
+      <div class="info">
+        <ul class="list-unstyled">
+          <li><strong>Title: </strong>{{data.name}}</li>
+          <li><strong>Description: </strong>{{data.description}}</li>
+          <li><strong>Price: </strong>{{data.price}}</li>
+        </ul>
+        <div class="inputQuantity">
+          <input type="number" name="" class="in" [(ngModel)]="amount"  >
+          <button class="btn btn-primary"routerLink="/"> <<----Back to Product list</button>
+          <button class="btn btn-primary" (click)="addToChart()" > Add to cart </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

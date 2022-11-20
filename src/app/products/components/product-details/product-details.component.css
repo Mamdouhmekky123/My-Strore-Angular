@@ -1,0 +1,41 @@
+.box{
+  width: 90%;
+  margin: 100px auto;
+  height: 500px;
+}
+.box ul li {
+  font-size: 22px;
+  margin: 20px 0;
+}
+.box img {
+  width:100%;
+  max-height: 500px;
+  min-height: 500px;
+  border: 2px solid #33B5E5;
+  padding: 15px;
+  border-radius: 10px;
+}
+.row{
+  display: flex;
+  flex-flow: row;
+}
+.data{
+  margin-left: 50px;
+}
+.inputQuantity {
+display: flex;
+flex-flow: row;
+}
+.inputQuantity button{
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
+}
+.inputQuantity button:hover{
+  background-color: rgb(46, 201, 46);
+}
+.in{
+  border-radius: 10px;
+  text-align: center;
+}

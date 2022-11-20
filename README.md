@@ -1,27 +1,60 @@
-# MyStore
+# MyStore Angular App for (Udacity NanoDegree scholarship)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+## About
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ MyStore is a single-page application built in Angular. It contains Multipule pages to represent some products and add it to cart and buy it:
 
-## Code scaffolding
+* It has 3 main component :         
+1- Shared Component    
+2- Product Component                                       
+3- Cart Component                
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+* It has  main functionalities :                         
+1-Add Products to cart                   
+2- Delete product from cart                            
+3- Checkout products in cart            
+4- show product details                      
+5- calculating the total price of products you buy 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+---
+# To Run this app
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## First: Install Dependencies 
+
+fork this repo and open a terminal at the root directory and run the command
+
+
+write ----->   npm install 
+
+
+## Second : Start server
+
+run this on the command ----> ng serve
+
+## Third : Go to browser 
+copy this link to the browser :
+http://localhost:4200/
+
+ The application will automatically reload if you change any of the source files.
+
+---
+
+## Languages used
+----
+* HTML
+* CSS
+* bootstrap
+* TypeScript
+
+
+---
+## Framework
+----
+* Angular

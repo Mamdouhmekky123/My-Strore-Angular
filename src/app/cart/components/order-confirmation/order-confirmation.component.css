@@ -1,0 +1,28 @@
+.final{
+  width:50%;
+  margin: 250px auto;
+  display: flex;
+  flex-flow: column;
+}
+.success{
+  text-align: center;
+  color: #2fabbb;
+}
+
+.thanks{
+  text-align: center;
+ 
+
+}
+.thanks span{
+  font-size: 25px;
+  font-weight: bold;
+}
+button{
+  width: 50%;
+  margin: 0 auto;
+}
+.ops{
+  text-align: center;
+  color: red;
+}
