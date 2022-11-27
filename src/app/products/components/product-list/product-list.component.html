@@ -3,8 +3,8 @@
   <div class="mb-5 my-2 w-25">
   </div>
 <div class="row">
-  <div class="col-md-4 col-sm-12 d-flex w-47" *ngFor="let item of products"  >          <!--(click)="this.data=item"-->
-   <app-single-product [data]="item" (item)="addToChart($event)" ></app-single-product>
+  <div class="col-md-4 col-sm-12 d-flex w-47" *ngFor="let item of products"  >    <!--(click)="this.data=item"-->      
+   <app-single-product [data]="item" (item)="addingToChart($event)" ></app-single-product>
     </div>
   </div>
 </div>

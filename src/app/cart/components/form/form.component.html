@@ -5,21 +5,25 @@
     <div class="form-row" >
       <div class="form-group col-md-6">
         <label for="name">Full name</label>
-        <input required minlength="3" [(ngModel)]="fullName"  name="fullName" type="text" class="form-control" id="name" placeholder="ex: Ali (minimum 3 characters)">
-    <!-- <br><span *ngIf="form.invalid" style="color:red ;">Please Enter a Valid Input </span> -->
+        <input required minlength="3" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" [(ngModel)]="userModel.name"  name="fullName" type="text" class="form-control" id="name" placeholder="ex: Ali (minimum 3 characters)">
+      <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required with at least 3 characters </small>
       </div>
     </div>
     <div class="form-group">
       <label for="inputAddress">Address</label>
-      <input required minlength="6" [(ngModel)]="Address" name="Address" type="text" class="form-control" id="inputAddress" placeholder="ex: 1234 Main St (minimum 6 characters)">
+      <input style = "width: 50%;" required minlength="6" #address="ngModel" [class.is-invalid]="address.invalid && address.touched"[(ngModel)]="userModel.address" name="Address" type="text" class="form-control" id="inputAddress" placeholder="ex: 1234 Main St (minimum 6 characters)">
+      <small [class.d-none]="address.valid || address.untouched" class="text-danger"> Address is required with at least 6 characters  </small>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputCity">Your Credit Card number</label>
-        <input required pattern="[0-9]{16}" [(ngModel)]="cardNumber" name="cardNumber"  s class="form-control" placeholder="(16- digit number)">
+        <input style="margin-bottom: 7px;" required pattern="^\d{16}$" #creditCard="ngModel" [class.is-invalid]="creditCard.invalid && creditCard.touched"[(ngModel)]="userModel.creditCard" name="cardNumber"  s class="form-control" placeholder="(16- digit number)">
+        <small [class.d-none]="creditCard.valid || creditCard.untouched" class="text-danger">Credit-Card must be 16 digits </small>
       </div>
     </div>
-    <p style="opacity: .7;">We will never share your payment details with any body else.</p>
-    <button  style="list-style-type: none;"[disabled]="form.invalid" type="submit" class="btn btn-primary" routerLink="/order-confirmation/{{fullName}}" >Submit</button>
+    <p style="opacity: .7; font-size: .85rem;">We will never share your payment details with any body else.</p>
+    <button  [disabled]="form.invalid" style="list-style-type: none;" type="submit" class="btn btn-primary" routerLink="/order-confirmation/{{userModel.name}}" >Submit</button>
   </form>
 </div>
+
+<!--  -->

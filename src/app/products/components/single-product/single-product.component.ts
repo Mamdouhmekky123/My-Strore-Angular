@@ -8,7 +8,7 @@ import { Product } from '../../Models/Product';
 })
 export class SingleProductComponent implements OnInit {
 
-  @Input() data!:Product;
+  @Input() data:any={};
   @Output() item=new EventEmitter;
   addQuantity:boolean=false;
   amount:number=1;

@@ -1,28 +1,45 @@
-.final{
-  width:50%;
+.final {
+  width: 50%;
   margin: 250px auto;
   display: flex;
   flex-flow: column;
 }
-.success{
+
+.success {
   text-align: center;
   color: #2fabbb;
 }
 
-.thanks{
+.thanks {
   text-align: center;
- 
+
 
 }
-.thanks span{
+
+.thanks span {
   font-size: 25px;
   font-weight: bold;
 }
-button{
+
+.row1 {
+  display: flex;
+}
+
+.row2 button {
   width: 50%;
   margin: 0 auto;
+  margin-left: 130px;
+
 }
-.ops{
+
+.row1 button {
+
+  width: 50%;
+  margin-left: 10px;
+
+}
+
+.ops {
   text-align: center;
   color: red;
 }

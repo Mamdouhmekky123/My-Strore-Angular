@@ -18,6 +18,7 @@ export class OrderConfirmationComponent implements OnInit {
   ngOnInit(): void {
     this.getCartProduct();
     this.getTotalCartPrice();
+    this.afterSubmit();
   }
   //get the set of products added to the cart from the local storage
   getCartProduct() {
@@ -34,12 +35,15 @@ export class OrderConfirmationComponent implements OnInit {
     }
     this.OrderNothing();
   }
-  // if the user press submit without adding anything to cart  
+  // if the user press submit without adding anything to cart
   OrderNothing() {
     if (this.total === 0) {
       this.order = false;
     } else {
       this.order = true;
     }
+  }
+  afterSubmit() {
+    localStorage.setItem('cart', JSON.stringify([]));
   }
 }

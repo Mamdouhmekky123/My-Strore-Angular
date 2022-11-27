@@ -1,14 +1,14 @@
 <div class="box">
   <div class="row" >
     <div class="col-md-5 col-sm-12" >
-      <img src="{{data.url}}" alt="" />
+      <img src="{{productData.url}}" alt="" />
     </div>
     <div class=" data co-md-7 col-sm-12">
       <div class="info">
         <ul class="list-unstyled">
-          <li><strong>Title: </strong>{{data.name}}</li>
-          <li><strong>Description: </strong>{{data.description}}</li>
-          <li><strong>Price: </strong>{{data.price}}</li>
+          <li><strong>Title: </strong>{{productData.name}}</li>
+          <li><strong>Description: </strong>{{productData.description}}</li>
+          <li><strong>Price: </strong>{{productData.price}}</li>
         </ul>
         <div class="inputQuantity">
           <input type="number" name="" class="in" [(ngModel)]="amount"  >
